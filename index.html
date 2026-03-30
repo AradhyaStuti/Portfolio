@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aradhya Stuti | AI/ML Engineer & MERN Stack Developer</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- AOS Animation -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<style>
+:root {
+  --bg: #0b0d10;
+  --card: #12151a;
+  --border: #1f2937;
+  --accent: #14b8a6;
+  --accent-gradient: linear-gradient(45deg, #0fffc1, #14b8a6);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero-bg {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(rgba(9,12,15,0.65), rgba(9,12,15,0.65)), url('me.jpeg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 120px;
+}
+
+.hero-bg h2 {
+  transform: translateY(20px);
+  opacity: 0;
+  animation: heroIn 1s forwards ease-out 0.5s;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+@keyframes heroIn {
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.giant-name {
+  font-size: clamp(4rem, 15vw, 15rem);
+  font-weight: 800;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  opacity: 0.08;
+  pointer-events: none;
+  color: var(--accent);
+  text-align: right;
+  width: 100%;
+  position: absolute;
+  bottom: 5vh;
+  right: 0;
+  user-select: none;
+}
+
+/* NAVIGATION */
+.nav-wrapper {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.nav-glass {
+  background: rgba(18,21,26,0.85);
+  backdrop-filter: blur(16px);
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.nav-glass:hover {
+  box-shadow: 0 15px 35px rgba(20,184,166,0.25);
+}
+
+.nav-glass a {
+  position: relative;
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+
+.nav-glass a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.35s ease, background 0.35s ease;
+}
+
+.nav-glass a:hover::after,
+.nav-glass a.active::after {
+  width: 100%;
+}
+
+.nav-glass a:hover,
+.nav-glass a.active {
+  color: var(--accent);
+  transform: scale(1.08);
+}
+
+/* CARDS */
+.bento-card, .cert-badge, .skill-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1.75rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease, background 0.4s ease;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.bento-card:hover, 
+.cert-badge:hover, 
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 15px 30px rgba(20,184,166,0.35), 0 0 25px rgba(20,184,166,0.2);
+  border-color: var(--accent);
+  background: linear-gradient(145deg, #0a0f12, #12151a);
+}
+
+/* CERTIFICATES */
+.cert-badge {
+  background: linear-gradient(135deg, #161a21 0%, #101318 100%);
+}
+
+/* GRADIENT TEXT */
+.text-gradient {
+  background: linear-gradient(to bottom, #ffffff, #94a3b8);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* ACCENT */
+.accent { color: var(--accent); }
+
+/* BUTTONS */
+.view-work {
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 10px rgba(20,184,166,0.25);
+}
+.view-work:hover {
+  background: var(--accent-gradient);
+  color: #000;
+  transform: scale(1.08);
+  box-shadow: 0 15px 35px rgba(20,184,166,0.4), 0 0 20px rgba(20,184,166,0.25);
+}
+
+/* GitHub Project Links */
+.project-link {
+  color: var(--accent);
+  border: 1px solid var(--border);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  display: inline-block;
+}
+.project-link:hover {
+  transform: translateY(-5px) scale(1.06);
+  box-shadow: 0 12px 25px rgba(20,184,166,0.25);
+  border-color: var(--accent);
+}
+
+/* FOOTER ICONS */
+.footer-icon {
+  transition: transform 0.35s ease, color 0.35s ease;
+  color: #a1a1aa;
+}
+.footer-icon:hover {
+  color: var(--accent);
+  transform: scale(1.45) rotate(-5deg);
+}
+
+/* SKILL PILLS */
+.skill-pill {
+  background: #0b0d10;
+  border: 1px solid #1f2937;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-pill:hover {
+  background: var(--accent);
+  color: #000;
+  transform: scale(1.08);
+  box-shadow: 0 5px 15px rgba(20,184,166,0.35);
+}
+
+/* SECTION SEPARATORS */
+section + section {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 6rem;
+}
+
+/* BACK TO TOP BUTTON */
+#backToTop {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px rgba(20,184,166,0.4);
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 999;
+}
+
+#backToTop.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+#backToTop:hover {
+  transform: scale(1.2) rotate(-10deg);
+  box-shadow: 0 15px 35px rgba(20,184,166,0.45);
+}
+
+/* CONTACT FORM UX */
+.send-loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(0,0,0,0.2);
+  border-top: 2px solid #000;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-bg h2 { font-size: 2.5rem; }
+  .giant-name { font-size: 8rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- FIXED NAVIGATION -->
+<nav class="nav-wrapper">
+  <div class="nav-glass flex flex-wrap items-center gap-4 md:gap-8 text-[9px] md:text-[10px] font-bold tracking-[0.15em] uppercase text-zinc-400">
+    <a href="#profile" class="nav-link hidden sm:block">Profile</a>
+    <a href="#skills" class="nav-link hidden sm:block">Skills</a>
+    <a href="#work" class="nav-link hidden sm:block">Work</a>
+    <a href="#expertise" class="nav-link hidden sm:block">Expertise</a>
+    <a href="#connect" class="nav-link hidden sm:block">Connect</a>
+    <a href="#" id="resumeBtn" class="bg-white text-black px-4 py-2 rounded-full flex items-center gap-2 view-work">Resume <i class="fas fa-download text-[8px]"></i></a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-bg px-6 relative" id="home">
+  <div class="hero-content flex flex-col h-full justify-between pt-32 pb-20 w-full max-w-7xl mx-auto z-10">
+    <div class="max-w-2xl text-left">
+      <p class="accent font-bold uppercase tracking-[0.35em] text-[10px] mb-4">AI / ML Engineer | MERN Stack Developer</p>
+      <h2 class="text-4xl md:text-6xl font-light leading-tight mb-8 text-gradient" data-aos="fade-up" data-aos-delay="200">
+        Engineering systems that learn, adapt, and scale.
+      </h2>
+      <a href="#work" class="view-work inline-flex items-center gap-4 border border-zinc-700 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-[10px] md:text-xs uppercase tracking-widest" data-aos="fade-up" data-aos-delay="400">
+        View Work <i class="fas fa-arrow-down ml-2"></i>
+      </a>
+    </div>
+    <h1 class="giant-name">Aradhya</h1>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="max-w-7xl mx-auto px-6 py-20 md:py-32">
+
+  <!-- ABOUT -->
+  <section id="profile" class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-24 md:mb-32">
+    <div class="bento-card md:col-span-12 flex flex-col justify-center" data-aos="fade-up" data-aos-delay="100">
+      <h3 class="text-zinc-400 text-[10px] font-bold uppercase tracking-widest mb-4 md:mb-6">Mission</h3>
+      <p class="text-2xl md:text-4xl font-medium leading-tight">
+        I design and engineer <span class="accent italic">scalable</span> MERN stack applications and 
+        <span class="text-white">intelligent AI/ML systems</span>.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="mb-24 md:mb-32">
+    <h2 class="text-zinc-400 text-[10px] font-bold uppercase tracking-[0.4em] mb-12">Skills</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="accent font-bold text-sm uppercase tracking-widest mb-4">Programming Languages</h3>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">SQL</span>
+        </div>
+      </div>
+      <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="accent font-bold text-sm uppercase tracking-widest mb-4">Web Development</h3>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="skill-pill">HTML</span>
+          <span class="skill-pill">CSS</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">Node.js</span>
+          <span class="skill-pill">Express.js</span>
+          <span class="skill-pill">MongoDB</span>
+          <span class="skill-pill">Bootstrap</span>
+          <span class="skill-pill">REST APIs</span>
+        </div>
+      </div>
+      <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="accent font-bold text-sm uppercase tracking-widest mb-4">Data Science & AI</h3>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="skill-pill">Scikit-learn</span>
+          <span class="skill-pill">Pandas</span>
+          <span class="skill-pill">NumPy</span>
+          <span class="skill-pill">Matplotlib</span>
+          <span class="skill-pill">Machine Learning</span>
+          <span class="skill-pill">Deep Learning</span>
+          <span class="skill-pill">Computer Vision</span>
+          <span class="skill-pill">Data Analysis</span>
+        </div>
+      </div>
+      <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+        <h3 class="accent font-bold text-sm uppercase tracking-widest mb-4">Deployment & Tools</h3>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="skill-pill">Git&Github</span>
+          <span class="skill-pill">Docker</span>
+          <span class="skill-pill">VS Code</span>
+          <span class="skill-pill">Streamlit</span>
+          <span class="skill-pill">PyTorch</span>
+          <span class="skill-pill">Jupyter Notebook</span>
+           <span class="skill-pill">Vercel</span>
+          <span class="skill-pill">Google Colab</span>
+        </div>
+      </div>
+      <div class="skill-card md:col-span-2" data-aos="fade-up" data-aos-delay="500">
+        <h3 class="accent font-bold text-sm uppercase tracking-widest mb-4">Languages Known</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-pill">English</span>
+          <span class="skill-pill">Hindi</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="work" class="mb-24 md:mb-48">
+    <h2 class="text-zinc-400 text-[10px] font-bold uppercase tracking-[0.4em] mb-12">Featured Work</h2>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+      <div class="bento-card md:col-span-12 group overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative z-10">
+          <span class="accent text-[10px] font-bold uppercase tracking-widest block mb-4">AI System</span>
+          <h3 class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tighter">AI PCB Defect Detection</h3>
+          <p class="text-zinc-400 text-base md:text-lg mb-8 max-w-xl leading-relaxed">
+            Deep learning-powered inspection system for detecting PCB defects using CNNs.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://github.com/AradhyaStuti/AI_PCB_Defect_Detection_Classification_System/tree/my-branch" target="_blank" class="project-link px-6 py-2 md:px-8 md:py-3 rounded-full font-bold text-[10px] md:text-xs uppercase tracking-widest">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bento-card md:col-span-6" data-aos="fade-up" data-aos-delay="200">
+        <h4 class="text-xl md:text-2xl font-bold mb-3">Student-Depression-Predictor</h4>
+        <p class="text-zinc-500 text-sm mb-6">ML model predicting mental health risks using behavioral datasets.</p>
+                <a href="https://github.com/AradhyaStuti/Student-Depression-Predictor.git" target="_blank" class="project-link font-bold text-[10px] uppercase tracking-widest">GitHub</a>
+      </div>
+      <div class="bento-card md:col-span-6" data-aos="fade-up" data-aos-delay="300">
+        <h4 class="text-xl md:text-2xl font-bold mb-3">Bubble Game (JS)</h4>
+        <p class="text-zinc-500 text-sm mb-6">Interactive browser game using vanilla JS and responsive UI.</p>
+        <a href="https://github.com/AradhyaStuti/Bubble-game-js.git" target="_blank" class="project-link font-bold text-[10px] uppercase tracking-widest">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section id="expertise" class="pt-10">
+    <div class="flex flex-col md:flex-row md:items-center justify-between mb-12 md:mb-20">
+      <h2 class="text-4xl md:text-5xl font-black italic tracking-tighter mb-4 md:mb-0">Expertise</h2>
+      <div class="hidden md:block h-px bg-zinc-800 flex-grow mx-8"></div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="cert-badge" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-microchip text-3xl accent mb-6"></i>
+        <h4 class="font-bold text-xl mb-3">Machine Learning</h4>
+        <p class="text-zinc-500 text-sm leading-relaxed">Supervised & unsupervised algorithms, predictive modeling.</p>
+      </div>
+      <div class="cert-badge" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-brain text-3xl accent mb-6"></i>
+        <h4 class="font-bold text-xl mb-3">Deep Learning</h4>
+        <p class="text-zinc-500 text-sm leading-relaxed">CNNs, neural networks, optimization pipelines.</p>
+      </div>
+      <div class="cert-badge" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-code text-3xl accent mb-6"></i>
+        <h4 class="font-bold text-xl mb-3">Full Stack</h4>
+        <p class="text-zinc-500 text-sm leading-relaxed">Frontend & backend engineering for ML systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="connect" class="pt-20 mb-32">
+    <h2 class="text-zinc-400 text-[10px] font-bold uppercase tracking-[0.4em] mb-12">Connect</h2>
+    <div class="bento-card max-w-2xl mx-auto p-8" data-aos="fade-up" data-aos-delay="100">
+      <form id="contactForm" class="flex flex-col gap-4">
+        <input type="text" name="from_name" placeholder="Your Name" required class="p-3 rounded bg-zinc-900 border border-zinc-700 text-white">
+        <input type="email" name="reply_to" placeholder="Your Email" required class="p-3 rounded bg-zinc-900 border border-zinc-700 text-white">
+        <input type="text" name="subject" placeholder="Subject" required class="p-3 rounded bg-zinc-900 border border-zinc-700 text-white">
+        <textarea name="message" placeholder="Message" rows="6" required class="p-3 rounded bg-zinc-900 border border-zinc-700 text-white"></textarea>
+        <button id="sendBtn" type="submit" class="view-work w-full py-3 mt-2 text-sm font-bold rounded-full flex items-center justify-center gap-3">
+          <span id="btnText">Send Message</span>
+          <span id="btnSpinner" class="spinner hidden"></span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="py-20 text-center border-t border-zinc-900 bg-black/40">
+  <div class="flex justify-center gap-10 mb-10">
+    <a href="https://github.com/AradhyaStuti" target="_blank" class="footer-icon text-2xl"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/aradhya-stuti" target="_blank" class="footer-icon text-2xl"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:aradhya.mutants@gmail.com" class="footer-icon text-2xl"><i class="fas fa-envelope"></i></a>
+  </div>
+  <p class="text-zinc-500 text-xs">© 2026 Aradhya Stuti. All rights reserved.</p>
+</footer>
+
+<!-- BACK TO TOP BUTTON -->
+<button id="backToTop" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+  AOS.init({ once:true, duration:1000, easing:'cubic-bezier(0.77,0,0.175,1)' });
+
+
+  /* BACK TO TOP */
+  const backToTop = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    if(window.scrollY > 500) backToTop.classList.add("show");
+    else backToTop.classList.remove("show");
+  });
+  backToTop.addEventListener("click", () => window.scrollTo({ top:0, behavior:"smooth" }));
+
+  /* ACTIVE NAV LINK */
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-link");
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 150;
+      if(scrollY >= sectionTop) current = section.getAttribute("id");
+    });
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if(link.getAttribute("href") === `#${current}`) link.classList.add("active");
+    });
+  });
+
+  /* SMOOTH SCROLL NAV LINKS */
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute("href"));
+      if(target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  /* EMAILJS CONTACT FORM */
+  emailjs.init("eichvB040mOh_QKIo"); // public key
+
+  const form = document.getElementById("contactForm");
+  const sendBtn = document.getElementById("sendBtn");
+  const btnText = document.getElementById("btnText");
+  const btnSpinner = document.getElementById("btnSpinner");
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    sendBtn.classList.add("send-loading");
+    btnText.textContent = "Sending...";
+    btnSpinner.classList.remove("hidden");
+
+    const mainEmail = emailjs.send("service_j2mfyrm","template_bhffo19",{
+      from_name: form.from_name.value,
+      reply_to: form.reply_to.value,
+      subject: form.subject.value,
+      message: form.message.value
+    });
+
+    const autoReply = emailjs.send("service_j2mfyrm","template_6jfu6oi",{
+      to_email: form.reply_to.value,
+      to_name: form.from_name.value
+    });
+
+    Promise.all([mainEmail, autoReply])
+      .then(()=> {
+        alert("Message sent successfully!");
+        form.reset();
+      })
+      .catch(err=> {
+        console.error("Email error:", err);
+        alert("Something went wrong. Please try again.");
+      })
+      .finally(()=> {
+        sendBtn.classList.remove("send-loading");
+        btnText.textContent = "Send Message";
+        btnSpinner.classList.add("hidden");
+      });
+  });
+
+  /* RESUME DOWNLOAD */
+  document.getElementById("resumeBtn").addEventListener("click", async function(e) {
+    e.preventDefault();
+    try {
+      const res = await fetch("resume.pdf");
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Aradhya_Stuti_Resume.pdf";
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch(err) {
+      window.open("resume.pdf", "_blank");
+    }
+  });
+</script>
+</body>
+</html>

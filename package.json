@@ -1,0 +1,23 @@
+{
+  "name": "aradhya-portfolio",
+  "version": "1.0.0",
+  "description": "MERN Stack Portfolio - Aradhya Stuti",
+  "main": "server/server.js",
+  "scripts": {
+    "server": "node server/server.js",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && cd client && npm install",
+    "build": "cd client && npm run build",
+    "start": "node server/server.js"
+  },
+  "keywords": [],
+  "author": "Aradhya Stuti",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1"
+  }
+}
