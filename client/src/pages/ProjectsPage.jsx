@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import useReveal from '../hooks/useReveal';
 
-const projectIcons = { 'Depression Risk Predictor': 'fa-brain', 'InferaMind AI': 'fa-robot', 'MeetSync': 'fa-video', 'GitForge': 'fa-code-branch', 'PCB Defect Detection': 'fa-microchip' };
+const projectIcons = { 'Depression Risk Predictor': 'fa-brain', 'InferaMind AI': 'fa-robot', 'MeetSync': 'fa-video', 'GitlessForge': 'fa-code-branch', 'PCB Defect Detection': 'fa-microchip' };
 const visualClass = { ai: 'project-visual-ai', ml: 'project-visual-ml', web: 'project-visual-web' };
 
 const fallbackProjects = [
   { _id: '1', title: 'Depression Risk Predictor', category: 'ml', description: 'PyTorch neural network for student mental health prediction. F1: 87.15%, AUC: 92.2%.', techStack: ['PyTorch', 'XGBoost', 'SHAP', 'FastAPI', 'Scikit-learn'] },
   { _id: '2', title: 'InferaMind AI', category: 'ai', description: 'ML tutoring system with RAG pipelines, FAISS search, and real-time streaming via Ollama.', techStack: ['LangChain', 'LangGraph', 'FAISS', 'React', 'Ollama', 'Docker'] },
   { _id: '3', title: 'MeetSync', category: 'web', description: 'Video conferencing with P2P/SFU architecture, encrypted chat, and waiting rooms. 247 tests.', techStack: ['React', 'Node.js', 'WebRTC', 'mediasoup', 'Socket.IO', 'Redis'] },
-  { _id: '4', title: 'GitForge', category: 'web', description: 'Code hosting platform with custom VCS, CI/CD pipelines, and Kanban boards. 129 tests.', techStack: ['React', 'Node.js', 'MongoDB', 'GraphQL', 'Redis', 'Docker'] },
+  { _id: '4', title: 'GitlessForge', category: 'web', description: 'Distributed version control and DevOps platform with custom VCS, CI/CD pipelines, and a 24-command CLI.', techStack: ['Node.js', 'JavaScript', 'JSON', 'Myers Diff', 'Shell', 'CI/CD'] },
   { _id: '5', title: 'PCB Defect Detection', category: 'ai', description: 'Computer vision system using ResNet-50 for automated PCB defect classification.', techStack: ['PyTorch', 'ResNet-50', 'FastAPI', 'Streamlit', 'Docker', 'OpenCV'] },
 ];
 

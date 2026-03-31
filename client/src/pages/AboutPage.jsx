@@ -8,12 +8,12 @@ const skills = [
 ];
 
 const expertise = [
-  { icon: 'fa-layer-group', title: 'Full Stack Development', desc: 'Building end-to-end web applications with React, Node.js, Express, and MongoDB. REST APIs serving 500+ daily requests with optimized performance.' },
-  { icon: 'fa-brain', title: 'Machine Learning & Deep Learning', desc: 'Designing ML pipelines with TensorFlow, PyTorch, and Scikit-learn — achieving 98.7% accuracy on production defect detection systems.' },
-  { icon: 'fa-eye', title: 'Computer Vision', desc: 'Image classification and visual inspection systems using CNNs, with image augmentation techniques that lift recall by 15%.' },
+  { icon: 'fa-layer-group', title: 'Full Stack Development', desc: 'Building end-to-end web applications with React, Node.js, Express, and MongoDB. REST APIs handling daily user traffic with optimized caching and query performance.' },
+  { icon: 'fa-brain', title: 'Machine Learning & Deep Learning', desc: 'Designing ML pipelines with TensorFlow, PyTorch, and Scikit-learn — achieving 92.2% AUC-ROC on classification systems with SHAP interpretability.' },
+  { icon: 'fa-eye', title: 'Computer Vision', desc: 'Image classification and defect detection systems using deep learning architectures with template matching and perceptual hashing.' },
   { icon: 'fa-robot', title: 'Generative AI & RAG Systems', desc: 'Building intelligent systems with LangChain, LangGraph, and vector databases. Prompt engineering and LLM-powered applications.' },
-  { icon: 'fa-chart-line', title: 'Data Analysis & NLP', desc: 'Classification systems on 10,000+ records, visualization dashboards, and natural language processing pipelines.' },
-  { icon: 'fa-rocket', title: 'Deployment & DevOps', desc: 'Containerization with Docker, CI/CD pipelines, server query optimization, and caching strategies that reduce load times by 40%.' },
+  { icon: 'fa-chart-line', title: 'Data Analysis & NLP', desc: 'Classification systems on 28,000+ records, monitoring dashboards, and natural language processing pipelines.' },
+  { icon: 'fa-rocket', title: 'Deployment & DevOps', desc: 'Containerization with Docker, CI/CD pipelines, server query optimization, and caching strategies that reduce page load latency by 15%.' },
 ];
 
 import useReveal from '../hooks/useReveal';
@@ -29,9 +29,7 @@ const AboutPage = () => {
           Aradhya Stuti
         </h1>
         <p style={{ color: '#71717a', fontSize: '18px', maxWidth: '640px', lineHeight: 1.7, marginBottom: '80px' }}>
-          Data Scientist and Full Stack Developer who built deep learning pipelines that raised
-          defect detection to 98.7% accuracy and cut manual inspection by 25%. Shipped production
-          web applications with REST APIs serving 500 daily requests while reducing page load time by 40%.
+          Data Scientist and Full-Stack Developer with production experience in deep learning, computer vision, and distributed web systems. Delivered ML models with over 92% classification accuracy, scalable REST APIs handling daily user traffic, and deployment workflows with 89% test coverage.
         </p>
 
         {/* Skills */}
@@ -77,8 +75,8 @@ const AboutPage = () => {
           <h2 className="section-title reveal" style={{ marginBottom: '40px' }}>Experience</h2>
           <div style={{ maxWidth: '600px' }}>
             {[
-              { period: 'Mar 2026 – Present', title: 'Software Developer Intern — Adanas Technology', desc: 'Restructured server queries and integrated caching, reducing average page load time by 40%. Shipped 10 REST API endpoints serving 500 requests/day with CI/CD pipelines.' },
-              { period: 'Nov 2025 – Jan 2026', title: 'Generative AI Intern — Infosys Springboard', desc: 'Engineered a deep learning pipeline on 5,000 labeled circuit board images, reaching 98.7% validation accuracy. Implemented image augmentation techniques that lifted recall by 15%.' },
+              { period: 'Mar 2026 – Present', title: 'Software Developer Intern — Adanas Technology', desc: 'Optimized server-side queries and integrated caching to reduce average page load latency by 15%. Developed over 10 REST endpoints managing daily user traffic, validated by automated test suites and a continuous integration pipeline.' },
+              { period: 'Nov 2025 – Jan 2026', title: 'Generative AI Intern — Infosys Springboard', desc: 'Spearheaded a PCB defect detection system using a deep learning architecture with template matching and perceptual hashing to classify six defect types. Delivered an API with Docker deployment, 24 unit validations, and continuous delivery.' },
             ].map((item) => (
               <div key={item.period} className="timeline-item reveal">
                 <span style={{ fontSize: '11px', fontWeight: 700, color: '#14b8a6', textTransform: 'uppercase', letterSpacing: '0.12em' }}>{item.period}</span>

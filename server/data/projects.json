@@ -78,25 +78,24 @@
   },
   {
     "_id": "f0096685cc46f9157e1a6e86",
-    "title": "GitForge",
-    "description": "Code hosting platform with custom VCS, CI/CD pipelines, and Kanban boards. 129 tests.",
-    "longDescription": "A full-featured code hosting and collaboration platform built from scratch.\n\n• Custom file-based version control system\n• Real CI/CD pipeline execution\n• Static code review with Myers diff algorithm\n• Kanban boards for project management\n• Hybrid GraphQL + REST API\n• Redis caching, JWT + API key authentication\n• Audit logging and webhook integrations",
+    "title": "GitlessForge",
+    "description": "Distributed version control and DevOps platform with custom VCS, CI/CD pipelines, and a 24-command CLI.",
+    "longDescription": "A distributed version control and DevOps platform built from scratch with no Git dependency.\n\n• Custom file-based version control system storing commits as JSON snapshots\n• Branching, merging, and a 24-command terminal interface\n• CI/CD pipelines executing real shell commands with exit codes, timeouts, and injection prevention\n• Static code review using Myers diff algorithm\n• Child process spawning for build automation",
     "category": "web",
     "techStack": [
-      "React 18",
       "Node.js",
-      "MongoDB",
-      "GraphQL",
-      "Redis",
-      "Socket.IO",
-      "Docker"
+      "JavaScript",
+      "JSON",
+      "Myers Diff",
+      "Shell",
+      "CI/CD"
     ],
-    "githubUrl": "https://github.com/AradhyaStuti/GitForge-Distributed-Version-Control-Automation-Platform.git",
+    "githubUrl": "https://github.com/AradhyaStuti/GitlessForge-Distributed-Version-Control-Automation-Platform.git",
     "highlights": [
       "Custom VCS engine",
-      "Real CI/CD pipelines",
-      "GraphQL + REST API",
-      "129 tests"
+      "No Git dependency",
+      "24-command CLI",
+      "Myers diff code review"
     ],
     "order": 4,
     "createdAt": "2026-03-29T19:03:10.853Z",
