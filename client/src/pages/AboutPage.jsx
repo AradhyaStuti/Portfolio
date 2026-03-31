@@ -1,9 +1,9 @@
 const skills = [
-  { title: 'Languages', items: ['Python', 'JavaScript', 'SQL'], icon: 'fa-code' },
+  { title: 'Languages', items: ['Python', 'JavaScript', 'SQL', 'MySQL'], icon: 'fa-code' },
   { title: 'Frontend', items: ['React', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap'], icon: 'fa-palette' },
   { title: 'Backend', items: ['Node.js', 'Express', 'Django', 'Flask', 'REST APIs'], icon: 'fa-server' },
-  { title: 'Databases & Infra', items: ['MongoDB', 'Redis', 'WebRTC', 'Socket.IO'], icon: 'fa-database' },
-  { title: 'AI / ML', items: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'LangChain', 'LangGraph', 'NLP', 'CNNs', 'RAG', 'Generative AI', 'LLMs'], icon: 'fa-brain' },
+  { title: 'Databases & Infra', items: ['MongoDB', 'Redis', 'AWS EC2', 'Linux'], icon: 'fa-database' },
+  { title: 'AI / ML', items: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'LangChain', 'Ollama', 'NLP', 'Computer Vision', 'RAG', 'Generative AI', 'Prompt Engineering'], icon: 'fa-brain' },
   { title: 'Data & Tools', items: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Streamlit', 'Git', 'Docker', 'CI/CD', 'Postman', 'Jupyter Notebook'], icon: 'fa-terminal' },
 ];
 
@@ -29,7 +29,7 @@ const AboutPage = () => {
           Aradhya Stuti
         </h1>
         <p style={{ color: '#71717a', fontSize: '18px', maxWidth: '640px', lineHeight: 1.7, marginBottom: '80px' }}>
-          Data Scientist and Full-Stack Developer with production experience in deep learning, computer vision, and distributed web systems. Delivered ML models with over 92% classification accuracy, scalable REST APIs handling daily user traffic, and deployment workflows with 89% test coverage.
+          AI/ML Engineer and Full-Stack Developer with production experience in deep learning, computer vision, and distributed web systems. Delivered machine learning models with 92.2 percent classification accuracy, scalable REST APIs serving 100+ daily requests, and deployment workflows with 89.6 percent test coverage. Published IEEE research on multimodal depression prediction.
         </p>
 
         {/* Skills */}
@@ -75,8 +75,8 @@ const AboutPage = () => {
           <h2 className="section-title reveal" style={{ marginBottom: '40px' }}>Experience</h2>
           <div style={{ maxWidth: '600px' }}>
             {[
-              { period: 'Mar 2026 – Present', title: 'Software Developer Intern — Adanas Technology', desc: 'Optimized server-side queries and integrated caching to reduce average page load latency by 15%. Developed over 10 REST endpoints managing daily user traffic, validated by automated test suites and a continuous integration pipeline.' },
-              { period: 'Nov 2025 – Jan 2026', title: 'Generative AI Intern — Infosys Springboard', desc: 'Spearheaded a PCB defect detection system using a deep learning architecture with template matching and perceptual hashing to classify six defect types. Delivered an API with Docker deployment, 24 unit validations, and continuous delivery.' },
+              { period: 'Mar 2026 – Present', title: 'Software Developer Intern — Adanas Technology', desc: 'Developed full-stack web applications using Django and React, delivering 10+ API routes serving daily user traffic in production. Optimized server-side queries and integrated Redis caching to reduce average page load latency by 15 percent.' },
+              { period: 'Nov 2025 – Jan 2026', title: 'Generative AI Intern — Infosys Springboard', desc: 'Researched and evaluated deep learning approaches for industrial defect detection, selecting ResNet-50 transfer learning and SSIM-based anomaly detection as the core pipeline. Spearheaded a PCB defect classifier for six defect types with a Streamlit UI, FastAPI endpoint, Docker deployment, 24 unit tests, and a four-job GitHub Actions CI pipeline.' },
             ].map((item) => (
               <div key={item.period} className="timeline-item reveal">
                 <span style={{ fontSize: '11px', fontWeight: 700, color: '#14b8a6', textTransform: 'uppercase', letterSpacing: '0.12em' }}>{item.period}</span>
@@ -93,7 +93,7 @@ const AboutPage = () => {
           <div className="card reveal" style={{ padding: '36px', maxWidth: '600px' }}>
             <h4 style={{ fontSize: '17px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Bachelor of Technology in Information Technology</h4>
             <p style={{ fontSize: '14px', color: '#14b8a6', fontWeight: 600, marginBottom: '4px' }}>Aug 2023 – Apr 2027</p>
-            <p style={{ fontSize: '14px', color: '#64748b', lineHeight: 1.7 }}>Raj Kumar Goel Institute of Technology, Abdul Kalam Technical University</p>
+            <p style={{ fontSize: '14px', color: '#64748b', lineHeight: 1.7 }}>Raj Kumar Goel Institute of Technology, Abdul Kalam Technical University — CGPA: 8.32 / 10.0</p>
           </div>
         </div>
 
@@ -115,9 +115,7 @@ const AboutPage = () => {
               'Deep Learning for Developers — Infosys Springboard',
               'Artificial Intelligence Primer — Infosys Springboard',
               'Prompt Engineering — Infosys Springboard',
-              'Data Analyst — One Roadmap',
-              'Full Stack Certification — One Roadmap',
-              'Internet of Things, Cloud Computing — NPTEL',
+              'Internet of Things and Cloud Computing — NPTEL',
             ].map((cert) => (
               <div key={cert} className="card reveal" style={{ padding: '16px 24px', width: '100%' }}>
                 <p style={{ fontWeight: 600, fontSize: '14px', color: '#94a3b8' }}>{cert}</p>

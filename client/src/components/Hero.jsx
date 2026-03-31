@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-const roles = ['Data Scientist', 'Full Stack Developer', 'Deep Learning Engineer', 'Generative AI Developer'];
+const roles = ['AI/ML Engineer', 'Full Stack Developer', 'Deep Learning Engineer', 'Generative AI Developer'];
 
 const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);

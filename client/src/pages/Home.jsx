@@ -13,7 +13,7 @@ const expertise = [
   { icon: 'fa-rocket', title: 'DevOps' },
 ];
 
-const allSkills = ['Python', 'JavaScript', 'SQL', 'React', 'Node.js', 'TensorFlow', 'PyTorch', 'LangChain', 'LangGraph', 'MongoDB', 'Docker', 'Django', 'Flask', 'Redis', 'Tailwind CSS', 'Express', 'Git', 'Scikit-learn', 'Pandas', 'Streamlit', 'WebRTC'];
+const allSkills = ['Python', 'JavaScript', 'SQL', 'MySQL', 'React', 'Node.js', 'TensorFlow', 'PyTorch', 'LangChain', 'Ollama', 'MongoDB', 'Docker', 'Django', 'Flask', 'Redis', 'Tailwind CSS', 'Express', 'Git', 'Scikit-learn', 'Pandas', 'Streamlit'];
 
 function SpotlightCard({ children, style }) {
   const ref = useRef(null);
@@ -60,9 +60,9 @@ const Home = () => {
           <div className="card-glow reveal" style={{ padding: '56px', position: 'relative', zIndex: 1 }}>
             <p style={{ fontSize: '24px', lineHeight: 1.7, color: '#94a3b8', fontWeight: 400 }}>
               I build <span style={{ color: '#fff', fontWeight: 700 }}>deep learning pipelines</span> that achieve
-              98.7% accuracy using TensorFlow, PyTorch, and LangChain, and ship{' '}
+              92.2% classification accuracy using TensorFlow, PyTorch, and LangChain, and ship{' '}
               <span style={{ color: '#fff', fontWeight: 700 }}>production web applications</span> with
-              REST APIs serving 500+ daily requests while reducing page load time by 40%.
+              REST APIs serving 100+ daily requests and deployment workflows with 89.6% test coverage.
             </p>
             <div style={{ marginTop: '36px' }}>
               <Link to="/about" className="btn-primary">
@@ -106,7 +106,7 @@ const Home = () => {
           <div className="reveal">
             <h2 className="section-title" style={{ marginBottom: '16px' }}>Let's work together</h2>
             <p style={{ color: '#52525b', marginBottom: '40px', maxWidth: '460px', marginLeft: 'auto', marginRight: 'auto', fontSize: '16px', lineHeight: 1.6 }}>
-              Looking for a data scientist or full-stack developer? Let's build something impactful together.
+              Looking for an AI/ML engineer or full-stack developer? Let's build something impactful together.
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
               <Link to="/contact" className="btn-primary">Get in Touch</Link>
