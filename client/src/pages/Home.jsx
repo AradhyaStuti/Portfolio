@@ -13,7 +13,7 @@ const expertise = [
   { icon: 'fa-rocket', title: 'DevOps' },
 ];
 
-const allSkills = ['Python', 'JavaScript', 'SQL', 'MySQL', 'React', 'Node.js', 'TensorFlow', 'PyTorch', 'LangChain', 'Ollama', 'MongoDB', 'Docker', 'Django', 'Flask', 'Redis', 'Tailwind CSS', 'Express', 'Git', 'Scikit-learn', 'Pandas', 'Streamlit'];
+const allSkills = ['Python', 'JavaScript', 'SQL', 'React', 'Node.js', 'TensorFlow', 'PyTorch', 'LangChain', 'Ollama', 'MongoDB', 'Docker', 'Django', 'Flask', 'Redis', 'Tailwind CSS', 'Express', 'Git', 'Scikit-learn', 'Pandas', 'Streamlit'];
 
 function SpotlightCard({ children, style }) {
   const ref = useRef(null);

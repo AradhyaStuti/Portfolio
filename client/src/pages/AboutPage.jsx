@@ -1,5 +1,5 @@
 const skills = [
-  { title: 'Languages', items: ['Python', 'JavaScript', 'SQL', 'MySQL'], icon: 'fa-code' },
+  { title: 'Languages', items: ['Python', 'JavaScript', 'SQL'], icon: 'fa-code' },
   { title: 'Frontend', items: ['React', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap'], icon: 'fa-palette' },
   { title: 'Backend', items: ['Node.js', 'Express', 'Django', 'Flask', 'REST APIs'], icon: 'fa-server' },
   { title: 'Databases & Infra', items: ['MongoDB', 'Redis', 'AWS EC2', 'Linux'], icon: 'fa-database' },
