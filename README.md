@@ -1,106 +1,92 @@
-<p align="center">
-  <img src="banner.svg" alt="Aradhya Stuti — Portfolio" width="100%" />
-</p>
 
 <h1 align="center">Aradhya Stuti — Portfolio</h1>
 
 <p align="center">
-  Data Scientist & Full Stack Developer<br/>
-  <strong>Deep Learning | Computer Vision | RAG Systems | Production Web Apps</strong>
+  Data Scientist & Full-Stack Developer<br/>
+  <strong>Machine Learning | Computer Vision | RAG Systems | Web Applications</strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/AradhyaStuti"><img src="https://img.shields.io/badge/GitHub-AradhyaStuti-181717?logo=github" /></a>
-  <a href="https://www.linkedin.com/in/aradhya-stuti"><img src="https://img.shields.io/badge/LinkedIn-aradhya--stuti-0A66C2?logo=linkedin" /></a>
-  <a href="mailto:aradhya.mutants@gmail.com"><img src="https://img.shields.io/badge/Email-aradhya.mutants%40gmail.com-EA4335?logo=gmail&logoColor=white" /></a>
+  <a href="https://github.com/AradhyaStuti">GitHub</a> •
+  <a href="https://www.linkedin.com/in/aradhya-stuti">LinkedIn</a> •
+  <a href="mailto:aradhya.mutants@gmail.com">Email</a>
 </p>
+
+---
+
+## About
+
+Personal portfolio showcasing my work in **machine learning and full-stack development**, including AI systems, web applications, and end-to-end deployed projects.
 
 ---
 
 ## Tech Stack
 
-| Layer | Technologies |
-|-------|-------------|
-| **Frontend** | React, Vite, Tailwind CSS, React Router |
-| **Backend** | Node.js, Express 5 |
-| **Email** | EmailJS (client-side, no server credentials) |
-| **Styling** | Custom dark theme, scroll animations, spotlight effects |
-| **Deployment** | Production-ready static build served via Express |
+- **Frontend:** React, Vite, Tailwind CSS  
+- **Backend:** Node.js, Express  
+- **UI:** Responsive design with simple animations  
+- **Email Service:** EmailJS  
+- **Deployment:** Express-based production build  
+
+---
 
 ## Features
 
-- Dark-themed responsive UI with scroll reveal animations and card spotlight effects
-- Animated hero section with typewriter rotating roles
-- Filterable project gallery (Web / AI / ML) with detailed project pages
-- Contact form powered by EmailJS with auto-reply to sender
-- Resume PDF download via server endpoint
-- Visitor page-view tracking
-- Mobile-first with hamburger nav and smooth page transitions
+- Responsive, clean UI with smooth scrolling  
+- Simple animated hero section  
+- Projects grouped into AI, ML, and Web categories  
+- Individual project detail pages  
+- Contact form with EmailJS integration  
+- Resume download support  
+- Mobile-friendly navigation  
 
-## Projects Showcased
-
-| Project | Category | Highlights |
-|---------|----------|------------|
-| **Depression Risk Predictor** | ML | PyTorch neural network, F1: 87.15%, SHAP explainability |
-| **InferaMind AI** | AI | RAG tutoring system, LangGraph, FAISS vector search |
-| **MeetSync** | Web | WebRTC video conferencing, AES-256 encrypted chat, 247 tests |
-| **GitForge** | Web | Code hosting platform, custom VCS, GraphQL + REST API |
-| **PCB Defect Detection** | AI | ResNet-50 computer vision, 98.7% validation accuracy |
-
-## Quick Start
-
-```bash
-# Install all dependencies
-npm run install-all
-
-# Run in development (server + client concurrently)
-npm run dev
-```
-
-- Frontend: `http://localhost:3000`
-- Backend API: `http://localhost:5000`
+---
 
 ## Project Structure
 
 ```
+
 portfolio/
-├── client/                  # React frontend
-│   ├── src/
-│   │   ├── components/      # Navbar, Hero, Footer, FeaturedProjects
-│   │   ├── pages/           # Home, About, Projects, ProjectDetail, Contact
-│   │   ├── hooks/           # useReveal (scroll animations)
-│   │   ├── App.jsx          # Router + transitions
-│   │   └── index.css        # Full design system
-│   └── vite.config.js
-├── server/                  # Express backend
-│   ├── routes/              # projects, contact, visitors
-│   ├── config/              # data store, seed
-│   ├── data/                # projects.json
-│   └── server.js
+├── client/      # React frontend
+├── server/      # Express backend
 ├── resume.pdf
 └── package.json
-```
 
-## API Endpoints
-
-| Method | Route | Description |
-|--------|-------|-------------|
-| GET | `/api/resume` | Download resume PDF |
-| GET | `/api/projects` | All projects (optional `?category=` filter) |
-| GET | `/api/projects/:id` | Single project details |
-| POST | `/api/contact` | Submit contact form |
-| POST | `/api/visitors/track` | Track page visit |
-
-## Scripts
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start server + client concurrently |
-| `npm run server` | Start Express server only |
-| `npm run client` | Start Vite dev server only |
-| `npm run build` | Build React app for production |
-| `npm start` | Start production server |
+````id="xv2m8c"
 
 ---
 
-<p align="center">Built with React, Node.js, and Express</p>
+## Getting Started
+
+```bash
+npm run install-all
+npm run dev
+````
+
+* Frontend: [http://localhost:3000](http://localhost:3000)
+* Backend: [http://localhost:5000](http://localhost:5000)
+
+---
+
+## API Endpoints
+
+* `GET /api/projects` – Fetch all projects
+* `GET /api/projects/:id` – Project details
+* `POST /api/contact` – Contact form submission
+* `GET /api/resume` – Download resume
+
+---
+
+## Scripts
+
+* `npm run dev` – Run full stack locally
+* `npm run server` – Run backend only
+* `npm run client` – Run frontend only
+* `npm run build` – Production build
+
+---
+
+<p align="center">
+Built with React and Node.js
+</p>
+```
