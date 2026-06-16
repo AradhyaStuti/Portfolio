@@ -57,6 +57,7 @@ const seedData = () => {
       category: 'web',
       techStack: ['React', 'Node.js', 'WebRTC', 'mediasoup', 'Socket.io', 'MongoDB'],
       githubUrl: 'https://github.com/AradhyaStuti/NexusMeet-Encrypted-Real-Time-Communication-Platform',
+      liveUrl: 'https://ushameetxbackend.onrender.com/',
       highlights: ['AES-GCM E2E encrypted chat', 'mediasoup SFU + P2P fallback', 'Waiting room + screen share', 'Jest + Playwright E2E tests'],
       order: 4,
     },

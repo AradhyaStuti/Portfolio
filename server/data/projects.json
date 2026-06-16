@@ -117,6 +117,7 @@
       "MongoDB"
     ],
     "githubUrl": "https://github.com/AradhyaStuti/NexusMeet-Encrypted-Real-Time-Communication-Platform",
+    "liveUrl": "https://ushameetxbackend.onrender.com/",
     "highlights": [
       "AES-GCM E2E encrypted chat",
       "mediasoup SFU + P2P fallback",
