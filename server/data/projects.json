@@ -1,0 +1,155 @@
+[
+  {
+    "_id": "0718293a4b5c6d7e8f900112",
+    "title": "AI PCB Defect Detection",
+    "description": "Computer vision system using SSIM-based anomaly detection and ResNet-50 for automated PCB defect classification across 6 defect types.",
+    "longDescription": "End-to-end AI system for detecting and classifying defects on printed circuit boards.\n\n• Two-stage pipeline — SSIM-based anomaly detection followed by ResNet-50 classification\n• Perceptual hashing for golden-reference template matching\n• Non-Maximum Suppression for localization\n• 6 defect types — missing hole, mouse bite, open circuit, short, spur, spurious copper\n• Streamlit UI for interactive analysis\n• FastAPI backend for API access\n• Dockerized deployment with four-job GitHub Actions CI",
+    "category": "ai",
+    "techStack": [
+      "PyTorch",
+      "ResNet-50",
+      "scikit-image",
+      "FastAPI",
+      "Streamlit",
+      "Docker"
+    ],
+    "githubUrl": "https://github.com/AradhyaStuti/AI_PCB_Defect_Detection_Classification_System/tree/my-branch",
+    "highlights": [
+      "SSIM + ResNet-50 two-stage pipeline",
+      "6 DeepPCB defect types",
+      "pHash golden-reference matching",
+      "Streamlit UI + FastAPI + Docker + CI"
+    ],
+    "order": 1,
+    "createdAt": "2026-05-07T00:00:00.000Z",
+    "updatedAt": "2026-05-07T00:00:00.000Z"
+  },
+  {
+    "_id": "f60718293a4b5c6d7e8f9001",
+    "title": "Student Depression Risk Predictor",
+    "description": "PyTorch neural network with a logistic regression baseline for student mental health prediction. Accuracy 85%, F1 0.87, ROC-AUC 0.92.",
+    "longDescription": "A machine learning system that predicts depression risk in students from 10 lifestyle inputs.\n\n• PyTorch neural network as the primary model\n• Logistic regression baseline for comparison\n• Trained on a ~28,000-row Kaggle dataset\n• Accuracy 85%, F1 0.87, ROC-AUC 0.92\n• Desktop GUI (customtkinter) showing probability, risk level, and advice\n• FastAPI REST service deployed via Docker\n• SQLite for prediction history persistence",
+    "category": "ml",
+    "techStack": [
+      "PyTorch",
+      "Scikit-learn",
+      "customtkinter",
+      "FastAPI",
+      "SQLite",
+      "Docker"
+    ],
+    "githubUrl": "https://github.com/AradhyaStuti/Machine-Learning-Based-Student-Depression-Risk-Prediction-System",
+    "liveUrl": "https://aradhyastuti-student-depression-prediction.hf.space/",
+    "highlights": [
+      "Accuracy 85%, F1 0.87, ROC-AUC 0.92",
+      "PyTorch NN + LR baseline",
+      "Desktop GUI + FastAPI + Docker",
+      "SQLite prediction history"
+    ],
+    "order": 2,
+    "createdAt": "2026-05-07T00:00:00.000Z",
+    "updatedAt": "2026-05-07T00:00:00.000Z"
+  },
+  {
+    "_id": "e5f60718293a4b5c6d7e8f90",
+    "title": "Seelenruh",
+    "description": "Multi-persona Generative AI assistant routing across 4 life-aid domains — mental health, legal rights, government schemes, personal safety — on Groq LLaMA-3 with FAISS RAG and EN/HI/DE multilingual answers.",
+    "longDescription": "A multi-persona GenAI assistant that routes user questions across four life-aid domains and answers in three languages.\n\n• 4-domain LLM routing — mental health, legal rights, government schemes, personal safety\n• LangGraph-driven intent classification before retrieval\n• Groq LLaMA-3 inference\n• FAISS-backed RAG with Sentence-Transformer embeddings and a cross-encoder reranker\n• Curated 100+ source knowledge base with citation grounding\n• Multilingual EN/HI/DE responses\n• FastAPI backend + React frontend\n• MongoDB Atlas, JWT auth, SSE-streamed responses\n• Dockerized deployment on Hugging Face Spaces",
+    "liveUrl": "https://aradhyastuti-seelenruh.hf.space/",
+    "category": "ai",
+    "techStack": [
+      "LangGraph",
+      "FAISS",
+      "Groq",
+      "FastAPI",
+      "React",
+      "MongoDB"
+    ],
+    "githubUrl": "https://github.com/AradhyaStuti/Seelenruh-Generative-AI-Assistant-with-RAG-LangGraph-and-FAISS",
+    "highlights": [
+      "4-domain LLM routing (mental health, legal, schemes, safety)",
+      "LangGraph + Groq LLaMA-3 + FAISS RAG",
+      "Cross-encoder reranking + 100+ source KB",
+      "EN/HI/DE multilingual, JWT auth, SSE streaming"
+    ],
+    "order": 0,
+    "createdAt": "2026-06-16T00:00:00.000Z",
+    "updatedAt": "2026-06-16T00:00:00.000Z"
+  },
+  {
+    "_id": "c3d4e5f60718293a4b5c6d7e",
+    "title": "RouteLM",
+    "description": "LLM course tutor with pre-retrieval query classification — routes between RAG, LLM-only, and refusal with sub-500ms off-topic refusals.",
+    "longDescription": "An LLM course assistant that routes a question through a three-path classifier before retrieval runs — RAG (grounded), LLM-only (general), or refusal (off-topic).\n\n• Per-course thresholds with max-anchor scoring instead of centroid averaging\n• 18/18 hand-picked queries correctly classified\n• On-topic latency ~1.1s, off-topic refusals under 500ms\n• 36 backend + 7 frontend tests\n• LangGraph orchestration, FAISS retrieval, Groq inference, Ollama bge-m3 embeddings\n• Circuit breaker, WebSocket/SSE streaming, SQLite auth\n• FastAPI backend + React frontend",
+    "category": "ai",
+    "techStack": [
+      "LangGraph",
+      "FAISS",
+      "Groq",
+      "Ollama",
+      "FastAPI",
+      "React"
+    ],
+    "githubUrl": "https://github.com/AradhyaStuti/RouteLM-ML-Tutor-LangGraph-RAG",
+    "liveUrl": "https://aradhyastuti-routelm.hf.space/",
+    "highlights": [
+      "Three-path query routing pre-retrieval",
+      "Sub-500ms refusals, ~1.1s on-topic",
+      "18/18 classifier accuracy, 43 tests",
+      "LangGraph + FAISS + Groq + Ollama"
+    ],
+    "order": 3,
+    "createdAt": "2026-05-07T00:00:00.000Z",
+    "updatedAt": "2026-05-07T00:00:00.000Z"
+  },
+  {
+    "_id": "a1b2c3d4e5f60718293a4b5c",
+    "title": "NexusMeet",
+    "description": "Encrypted real-time communication platform with WebRTC, mediasoup SFU routing, AES-GCM end-to-end chat, and automatic P2P fallback.",
+    "longDescription": "An encrypted real-time communication platform built on WebRTC, mediasoup SFU routing, and browser-based AES-GCM end-to-end encryption.\n\n• AES-GCM end-to-end chat via Web Crypto API — chat key in URL hash, server only sees ciphertext\n• mediasoup-based SFU for scalable group calls\n• Automatic P2P fallback when SFU is unavailable\n• Waiting room with host approval\n• Screen sharing\n• Host promotion when organizer leaves\n• ~24-hour ephemeral room persistence\n• React 18 + Node/Express + MongoDB + Socket.io + Material-UI\n• Backend, frontend, and Playwright E2E tests",
+    "category": "web",
+    "techStack": [
+      "React",
+      "Node.js",
+      "WebRTC",
+      "mediasoup",
+      "Socket.io",
+      "MongoDB"
+    ],
+    "githubUrl": "https://github.com/AradhyaStuti/NexusMeet-Encrypted-Real-Time-Communication-Platform",
+    "highlights": [
+      "AES-GCM E2E encrypted chat",
+      "mediasoup SFU + P2P fallback",
+      "Waiting room + screen share",
+      "Jest + Playwright E2E tests"
+    ],
+    "order": 4,
+    "createdAt": "2026-05-07T00:00:00.000Z",
+    "updatedAt": "2026-05-07T00:00:00.000Z"
+  },
+  {
+    "_id": "b2c3d4e5f60718293a4b5c6d",
+    "title": "GitlessForge",
+    "description": "Distributed version control system built from scratch — snapshots, branches, merges, diff, blame, stash, reflog — wrapped with a GitHub-style platform (PRs, code review, CI, Kanban).",
+    "longDescription": "A from-scratch distributed version control system — not a Git wrapper, not a libgit2 binding.\n\n• File snapshots, branches, merges, diff, blame, stash, reflog — all implemented from scratch\n• GitHub-style platform on top — pull requests, code review, merge workflows\n• Static analysis flags hardcoded secrets and unsafe functions in PRs\n• CI/CD pipelines with multi-stage steps and logging\n• Drag-and-drop Kanban project boards\n• Auth, rate limiting, API keys\n• Node + Express + MongoDB backend\n• React + Vite frontend\n• Jest integration tests, Docker Compose deployment",
+    "category": "web",
+    "techStack": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "React",
+      "Vite",
+      "Docker"
+    ],
+    "githubUrl": "https://github.com/AradhyaStuti/GitlessForge-Distributed-Version-Control-Automation-Platform",
+    "highlights": [
+      "VCS from scratch — no Git",
+      "Branches, merges, diff, blame, stash, reflog",
+      "PRs + code review + CI + static analysis",
+      "Kanban + auth + rate limiting"
+    ],
+    "order": 5,
+    "createdAt": "2026-05-07T00:00:00.000Z",
+    "updatedAt": "2026-05-07T00:00:00.000Z"
+  }
+]
